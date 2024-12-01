@@ -1,43 +1,104 @@
 main {
-    padding: 20px 40px;
-    background-color: #f3f3f3;
+    padding: 20px;
+    background-color: #ebe0d2;
 }
 
-main .content {
+.content {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    gap: 20px; 
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-main .text-content {
-    flex: 1; 
+.text-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1800px;
+    gap: 20px;
+}
+
+.content .feature-label{
+    font-size: 2.5rem;
+}
+.text-content {
+    flex: 1;
+    max-width: 900px;
     text-align: left;
 }
 
-main .text-content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-main .text-content p {
-    font-size: 1.2rem;
+.text-content p {
+    font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #555;
 }
 
-main button {
-    background-color: rgb(41, 80, 218);
+.text-content button {
     padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    color: white;
-    font-size: 1.1rem;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-main .main-image {
-    flex-shrink: 0; 
-    max-width: 50%; 
-    height: auto; 
-    object-fit: cover; 
+.text-content button:hover {
+    background-color: #0056b3;
+}
+
+.main-image {
+    flex: 1;
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
 }
