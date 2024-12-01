@@ -4,7 +4,7 @@
     justify-content: space-between;
     color: white;
     align-items:center ;
-    padding: 1rem 1rem;
+    padding: 1.2rem 1rem;
 }
 
 .homepage-navbar .Expense-Tracker{
@@ -27,7 +27,7 @@
 }
 
 .homepage-navbar .Signin-Button {
-    background-color: rgb(23, 62, 203);
+    background-color: rgb(41, 80, 218);
     padding: 5px 15px;
     border-radius: 5px;
     border: 0px;

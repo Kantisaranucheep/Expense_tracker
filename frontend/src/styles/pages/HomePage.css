@@ -1,0 +1,43 @@
+main {
+    padding: 20px 40px;
+    background-color: #f3f3f3;
+}
+
+main .content {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+main .text-content {
+    flex: 1; 
+    text-align: left;
+}
+
+main .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+main .text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+main button {
+    background-color: rgb(41, 80, 218);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+main .main-image {
+    flex-shrink: 0; 
+    max-width: 50%; 
+    height: auto; 
+    object-fit: cover; 
+}
