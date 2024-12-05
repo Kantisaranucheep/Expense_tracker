@@ -1,0 +1,33 @@
+.income-expense-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.income-expense-container div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.income-expense-container h3 {
+    font-size: 1.2rem;
+}
+
+.income-container p {
+    color: #163b72; 
+  }
+  
+.expense-container p{
+    color: #ad2f2f; 
+  }
+  
+.balance-container p{
+    color: #22a142; 
+  }
+
+.total-transaction-container p{
+    color: #000000;
+  }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -15,7 +16,9 @@ function Homepage() {
                             <div className="text-content">
                                 <h2>Take the pain out of creating expense reports</h2>
                                 <p>Manage your expense reporting process easier with Expense Tracker's convenient features and automation tools.</p>
-                                <button>Try it now!</button>
+                                <Link to="/main">
+                                    <button>Try it now!</button>
+                                </Link>
                             </div>
                             <img src="/assets/images/homepage-pic1.png" alt="Expense Tracker Preview" className="main-image" />
                     </div>

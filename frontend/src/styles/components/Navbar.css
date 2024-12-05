@@ -14,7 +14,7 @@
 .homepage-navbar ul {
     list-style: none;
     display: flex;
-    gap: 1rem  ;
+    gap: 1.5rem  ;
     font-size: 1.3rem;
     align-items:center ;
     margin: 0;
