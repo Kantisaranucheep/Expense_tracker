@@ -5,34 +5,35 @@ import Sidebar from "../components/layout/Sidebar";
 import IncomeExpense from "../components/dashboard/IncomeExpense";
 import TotalExpense from "../components/dashboard/TotalExpense";
 import LineChart from "../components/dashboard/LineChart";
-import "../styles/pages/MainPage.css"
+import Barchart from "../components/dashboard/Barchart";
+import "../styles/pages/MainPage.css";
 
-function MainPage(){
+function MainPage() {
     return (
         <div className="dashboard-container">
-                <Navbar />
+            <Navbar />
             <div className="lol">
                 <div className="main-content">
                     <div className="sidebar-container">
-                        <Sidebar/>
+                        <Sidebar />
                     </div>
                     <div className="right-content">
                         <div className="income-container">
-                            <IncomeExpense/>
+                            <IncomeExpense />
                         </div>
-                        <div className="charts-container">
-                            <TotalExpense/>
+                        <div className="charts-container single-chart">
+                            <TotalExpense />
                         </div>
-                        <div className="charts-container">
-                            <LineChart/>
+                        <div className="charts-container side-by-side">
+                            <LineChart />
+                            <Barchart />
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
-
-    )
+    );
 }
 
 export default MainPage;
