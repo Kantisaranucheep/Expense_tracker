@@ -11,14 +11,23 @@ function MainPage(){
     return (
         <div className="dashboard-container">
                 <Navbar />
-            <div className="main-content">
-                
-                <IncomeExpense/>
-                <div className="charts-container">
-                    <TotalExpense/>
-                    <LineChart/>
+            <div className="lol">
+                <div className="main-content">
+                    <div className="sidebar-container">
+                        <Sidebar/>
+                    </div>
+                    <div className="right-content">
+                        <div className="income-container">
+                            <IncomeExpense/>
+                        </div>
+                        <div className="charts-container">
+                            <TotalExpense/>
+                        </div>
+                        <div className="charts-container">
+                            <LineChart/>
+                        </div>
+                    </div>
                 </div>
-
             </div>
             <Footer/>
         </div>

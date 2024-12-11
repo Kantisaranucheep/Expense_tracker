@@ -1,3 +1,13 @@
+.profile {
+    text-align: center;
+    padding-bottom:20px ;
+}
+
+.profile-image{
+    width: 100px;
+    border-radius: 50%;
+}
+
 .sidebar {
     height: 80vh;
     width: 250px;
@@ -15,6 +25,7 @@
     padding: 20px;
     margin: 0;
     text-align: center;
+    font-weight: bolder;
 }
 
 .sidebar-link {
