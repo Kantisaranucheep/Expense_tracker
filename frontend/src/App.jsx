@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Signin from './pages/Signin';
 import MainPage from './pages/MainPage';
+import Transaction from './pages/Transaction';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/main" element={<MainPage/>}/>
+        <Route path="/Transaction" element={<Transaction/>}/>
       </Routes>
     </Router>
   );
