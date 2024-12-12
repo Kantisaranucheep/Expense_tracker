@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import AddExpenseForm from "../forms/AddExpenseForm";
 import "../../styles/components/dashboard/Transactionlist.css";
 
 function Transactionlist(){
@@ -8,15 +9,12 @@ function Transactionlist(){
        {id: 2, name: "Gym membership", amount: -500},
        {id: 3, name: "Groceries", amount: -200},
     ]);
+
+    const [isFormOpen, setIsFormOpen] = useState(false);
     
-    const addTransaction = () => {
-        const newTransaction = {
-            id: transactions.length +1,
-            name: "New Transaction",
-            amount: 0,
-        };
-        setTransactions([...transactions, newTransaction]);
-    };  
+    const handleSave = (newTransaction) => {
+        setTransactions([...transactions, {id: transactions.length +1, ...newTransaction}])
+    };
 
     return (
         <div className="transactionlist-container">
@@ -35,9 +33,25 @@ function Transactionlist(){
                     </li>
                 ))}
             </ul>
-            <button className="add-transaction-button" onClick={addTransaction}>
+            <button className="add-transaction-button" onClick={() => setIsFormOpen(true)}>
                 Add Transaction
             </button>
+            {isFormOpen && (
+                <div className="modal-overlay">
+                    <div className="modal-content">
+                        <button
+                            className="modal-close"
+                            onClick={() => setIsFormOpen(false)}
+                        >
+                            &times;
+                        </button>
+                        <AddExpenseForm
+                            onClose={() => setIsFormOpen(false)}
+                            onSave={handleSave}
+                        />
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
