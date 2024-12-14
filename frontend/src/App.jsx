@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Signin from './pages/Signin';
 import MainPage from './pages/MainPage';
 import Transaction from './pages/Transaction';
+import Login from './components/forms/Login';
+import Signup from './components/forms/Signup';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/main" element={<MainPage/>}/>
         <Route path="/Transaction" element={<Transaction/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Signup" element={<Signup/>}/>
       </Routes>
     </Router>
   );
