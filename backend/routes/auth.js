@@ -10,10 +10,13 @@ const router = express.Router();
 const SECRET_KEY = process.env.SECRET_KEY;
 
 router.post("/signup", async (req, res) => {
-    const { email, password } = req.body;
+    const { name, surname, email, password } = req.body;
     try {
+        if (!name || !surname || !email || !password){
+            return res.status(400).json({error: "All fields are required"});
+        }
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ email, password: hashedPassword });
+        const newUser = new User({name, surname, email, password: hashedPassword });
         await newUser.save();
         res.status(201).json({ message: "User created successfully" });
     } catch (err) {
@@ -31,7 +34,9 @@ router.post("/login", async (req, res) => {
         if (!isPasswordValid) return res.status(401).json({ error: "Invalid password" });
 
         const token = jwt.sign({ id: user._id }, SECRET_KEY, { expiresIn: "1h" });
-        res.json({ token });
+        res.json({ token,
+                   user: { name: user.name, surname: user.surname, email: user.email } 
+         });
     } catch (err) {
         res.status(500).json({ error: "Internal server error" });
     }
