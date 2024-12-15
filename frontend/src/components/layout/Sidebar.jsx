@@ -3,11 +3,13 @@ import {Link} from "react-router-dom";
 import "../../styles/components/Sidebar.css";
 
 const Sidebar = () => {
+    const name = localStorage.getItem("userName") || "Guest";
+    const surname = localStorage.getItem("userSurname") || "";
     return (
         <div className="sidebar">
             <div className="profile">
-                <img className="profile-image" src="/assets/images/profile-image.jpg" alt="profile-image" />
-                <h3>John Doe</h3>
+                <img className="profile-image" src="/assets/images/profile-image.png" alt="profile-image" />
+                <h3>{name} {surname}</h3>
             </div>
                 <ul className="sidebar-menu">
                     <li>

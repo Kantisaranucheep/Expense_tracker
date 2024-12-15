@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import "../../styles/components/forms/Login.css";
 
 function Login(){
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -11,6 +13,9 @@ function Login(){
         try {
             const response = await axios.post("http://localhost:5000/auth/login", {email, password});
             localStorage.setItem("token", response.data.token);
+            localStorage.setItem("userName", response.data.user.name);
+            localStorage.setItem("userSurname", response.data.user.surname);
+            navigate("/main");
             alert("Login Successful!");
         }catch (err){
             alert(err.response.data.error);
