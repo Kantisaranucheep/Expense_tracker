@@ -18,7 +18,7 @@ function Navbar(){
                     <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                    <Link to="/signin"><button className="Signin-Button">Sign in</button></Link>
+                    <Link to="/signin"><button className="Signin-Button">Login</button></Link>
                 </li>
             </ul>
         </nav>
