@@ -29,6 +29,13 @@ function Navbar(){
                 <li>
                     <Link to="/contact">Contact</Link>
                 </li>
+                {isLoggedIn ? (
+                    <li>
+                        <Link to="/main">Dashboard</Link>
+                    </li>
+                ): (
+                    <></>
+                )}
                 <li>
                     {isLoggedIn ? (
                         <button className="Signin-Button" onClick={handlelogout}>Sign Out</button>
@@ -37,6 +44,7 @@ function Navbar(){
                     )}
                     
                 </li>
+                
             </ul>
         </nav>
     )

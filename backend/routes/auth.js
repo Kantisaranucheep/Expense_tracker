@@ -43,3 +43,7 @@ router.post("/login", async (req, res) => {
 });
 
 export default router;
+
+//Searches the database for a user with the given email.
+//Verifies the password by comparing it with the hashed password stored in the database using bcrypt.compare().
+//If valid, generates a JWT token (jwt.sign) and sends it back in the response, along with the user's name and surna
